@@ -1,0 +1,51 @@
+<div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>Stuff</h3>
+            <ul class="links">
+
+              <li><a href="#">Stuff</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+
+      </div>
+
+      <div id="content">
+        <div id="header">
+          <h1>NSIP SIF REST Proxy</h1>
+          <h2>Experimental SIF REST Proxy</h2>
+        </div>
+
+        <div>
+
+<h2>URLs</h2>
+<ul>
+	<li>
+		<a href="token/">token/ What token are you using?</a>
+	</li>
+	<li>
+		<a href="api/">api/ Go directly to the API</a>
+	</li>
+	<li>
+		<a href="api/environments/current/">environments/current Automatically map current Envionments</a>
+	</li>
+	<li>
+		<a href="api/students/">students/ list of students - JSON</a>
+	</li>
+	<li>
+		<a href="list.html">List students - AJAX jQuery</a> (<a href="list.js">View code</a>)
+	</li>
+</ul>
+
+<h2>Other things to see</h2>
+<ul>
+	<li><a href="api/zones/">list of zones</a></li>
+	<li><a href="api/alerts/">list of alerts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
