@@ -24,16 +24,16 @@
 <h2>URLs</h2>
 <ul>
 	<li>
-		<a href="token/">token/ What token are you using?</a>
+		<a href="token">token What token are you using?</a>
 	</li>
 	<li>
-		<a href="api/">api/ Go directly to the API</a>
+		<a href="api">api Go directly to the API</a>
 	</li>
 	<li>
-		<a href="api/environments/current/">environments/current Automatically map current Envionments</a>
+		<a href="api/environments/current">environments/current Automatically map current Envionments</a>
 	</li>
 	<li>
-		<a href="api/students/">students/ list of students - JSON</a>
+		<a href="api/students">students/ list of students - XML</a>
 	</li>
 	<li>
 		<a href="list.html">List students - AJAX jQuery</a> (<a href="list.js">View code</a>)
@@ -42,8 +42,8 @@
 
 <h2>Other things to see</h2>
 <ul>
-	<li><a href="api/zones/">list of zones</a></li>
-	<li><a href="api/alerts/">list of alerts</a></li>
+	<li><a href="api/zones">list of zones</a></li>
+	<li><a href="api/alerts">list of alerts</a></li>
 </ul>
 
         </div>

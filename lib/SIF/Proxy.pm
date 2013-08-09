@@ -7,16 +7,17 @@ use SIF::REST;
 
 our $VERSION = '0.1';
 prefix undef;
-#set serializer => 'JSON';
+set serializer => 'JSON';
 #set session => 'YAML';
 
+# TODO - store a client per session (Storable or similar)
 sub client {
 	our $client;
 	if (!defined $client) {
 		$client = SIF::REST->new({
 			endpoint => 'http://rest3api.sifassociation.org/api',
-			# XXX Make this config, or even allow as input
-			solutionId => 'auTestSolution',
+			# TODO Make this config, or even allow as input
+			# solutionId => 'auTestSolution',
 		});
 		$client->setupRest();
 	}
@@ -33,6 +34,7 @@ get '/' => sub {
 get '/token' => sub {
 	return {
 		token => client()->sessionToken,
+		authorization => client()->authorization,
 		# date => session('authorizationDate'). "",
 	};
 };
@@ -47,6 +49,9 @@ get '/api' => sub {
 };
 
 #get qr{/api/(.+$)} => sub {
+
+# NOTE: This will map all objects, not separate infrastructure (may not
+# matter...)
 
 get '/api/:object' => sub {
 	header('Content-Type' => 'application/xml');
