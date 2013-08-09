@@ -2,12 +2,14 @@
 use Dancer ':syntax';
 use FindBin '$RealBin';
 use Plack::Handler::FCGI;
+use lib '../sif-rest-perl/lib';
+use lib '../../sif-rest-perl/lib';
 
 # For some reason Apache SetEnv directives dont propagate
 # correctly to the dispatchers, so forcing PSGI and env here 
 # is safer.
 set apphandler => 'PSGI';
-set environment => 'production';
+set environment => 'development';
 
 my $psgi = path($RealBin, '..', 'bin', 'app.pl');
 my $app = do($psgi);
