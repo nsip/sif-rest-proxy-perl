@@ -13,6 +13,8 @@ set serializer => 'JSON';
 # TODO - store a client per session (Storable or similar)
 sub client {
 	our $client;
+	# NOTE: Currently alwyas expiring... (inefficient)
+	$client = undef;
 	if (!defined $client) {
 		$client = SIF::REST->new({
 			endpoint => 'http://rest3api.sifassociation.org/api',
